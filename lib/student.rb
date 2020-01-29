@@ -93,7 +93,8 @@ class Student
     sql = <<-SQL
       SELECT COUNT(*)
       FROM students
-      WHERE grade = 10;
+      WHERE grade = 10
+      LIMIT 2;
     SQL
 
     DB[:conn].execute(sql).map do |row|
